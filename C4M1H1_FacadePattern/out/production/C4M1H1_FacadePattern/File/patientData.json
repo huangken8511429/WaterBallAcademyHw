@@ -1,0 +1,26 @@
+[
+  {
+    "id": "A123456789",
+    "name": "Wang Xiao Ming",
+    "gender": "male",
+    "age": 22,
+    "height": 175.2,
+    "weight": 70.5
+  },
+  {
+    "id": "B222312312",
+    "name": "Chen Xiao Hua",
+    "gender": "female",
+    "age": 18,
+    "height": 157.3,
+    "weight": 55.8
+  },
+  {
+    "id": "A103456789",
+    "name": "Happy Pola",
+    "gender": "male",
+    "age": 21,
+    "height": 180,
+    "weight": 499
+  }
+]

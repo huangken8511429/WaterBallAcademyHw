@@ -103,21 +103,11 @@ public class PatientSystem {
         List<String> fieldValues = new ArrayList<>();
         for (String fieldName : fieldNames) {
             switch (fieldName) {
-                case "name":
-                    fieldValues.add(prescription.getName());
-                    break;
-                case "potentialDisease":
-                    fieldValues.add(prescription.getPotentialDisease());
-                    break;
-                case "medicines":
-                    fieldValues.add(prescription.getMedicines());
-                    break;
-                case "usage":
-                    fieldValues.add(prescription.getUsage());
-                    break;
-                default:
-                    System.out.println("Unsupported field: " + fieldName);
-                    break;
+                case "name" -> fieldValues.add(prescription.getName());
+                case "potentialDisease" -> fieldValues.add(prescription.getPotentialDisease());
+                case "medicines" -> fieldValues.add(prescription.getMedicines());
+                case "usage" -> fieldValues.add(prescription.getUsage());
+                default -> System.out.println("Unsupported field: " + fieldName);
             }
         }
         return fieldValues;

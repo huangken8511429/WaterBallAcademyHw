@@ -1,6 +1,6 @@
 package Base;
 
-public abstract class DiseaseHandler {
+public abstract class Disease {
 
     protected Prescription handle(Patient patient, Symptom[] symptoms) {
         if (matched(patient,symptoms)){

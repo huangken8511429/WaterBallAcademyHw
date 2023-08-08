@@ -4,11 +4,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class PrescribeTask {
-    private List<DiseaseHandler> diseasesHandler;
+    private List<Disease> diseasesHandler;
     private Patient patient;
     private Symptom[] symptoms;
 
-    public PrescribeTask(List<DiseaseHandler> diseasesHandler, Patient patient, Symptom[] symptoms) {
+    public PrescribeTask(List<Disease> diseasesHandler, Patient patient, Symptom[] symptoms) {
         this.diseasesHandler = diseasesHandler;
         this.patient = patient;
         this.symptoms = symptoms;
@@ -18,8 +18,8 @@ public class PrescribeTask {
         List<Prescription> prescriptions = new ArrayList<>();
         try {
             Thread.sleep(3000);
-            for (DiseaseHandler diseaseHandler : diseasesHandler) {
-                Prescription prescription = diseaseHandler.handle(patient, symptoms);
+            for (Disease disease : diseasesHandler) {
+                Prescription prescription = disease.handle(patient, symptoms);
                 if (prescription != null) {
                     prescriptions.add(prescription);
                 }

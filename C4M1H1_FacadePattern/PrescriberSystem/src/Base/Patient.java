@@ -11,7 +11,7 @@ public class Patient {
     private int age;
     private float height;
     private float weight;
-    private List<Case> cases;
+    private final List<Case> cases;
 
     public Patient() {
         cases = new ArrayList<>();

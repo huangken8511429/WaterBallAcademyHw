@@ -1,12 +1,12 @@
 package DiseaseHandler;
-import Base.DiseaseHandler;
+import Base.Disease;
 import Base.Patient;
 import Base.Prescription;
 import Base.Symptom;
 
 import java.util.Arrays;
 
-public class Attractive extends DiseaseHandler {
+public class Attractive extends Disease {
     @Override
     protected boolean matched(Patient patient, Symptom[] symptoms) {
         return patient.getAge() == 18 && patient.getGender().equalsIgnoreCase("FEMALE") && Arrays.stream(symptoms).anyMatch(symptom -> symptom == Symptom.SQUEEZE);

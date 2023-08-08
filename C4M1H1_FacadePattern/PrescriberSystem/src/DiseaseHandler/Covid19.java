@@ -1,14 +1,13 @@
 package DiseaseHandler;
 
-import Base.DiseaseHandler;
+import Base.Disease;
 import Base.Patient;
 import Base.Prescription;
 import Base.Symptom;
 
 import java.util.Arrays;
-import java.util.List;
 
-public class Covid19 extends DiseaseHandler {
+public class Covid19 extends Disease {
     @Override
     protected boolean matched(Patient patient, Symptom[] symptoms) {
         return Arrays.stream(symptoms).anyMatch(symptom -> symptom == Symptom.HEADACHE)

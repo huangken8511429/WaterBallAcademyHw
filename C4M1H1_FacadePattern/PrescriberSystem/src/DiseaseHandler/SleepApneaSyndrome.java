@@ -1,13 +1,13 @@
 package DiseaseHandler;
 
-import Base.DiseaseHandler;
+import Base.Disease;
 import Base.Patient;
 import Base.Prescription;
 import Base.Symptom;
 
 import java.util.Arrays;
 
-public class SleepApneaSyndrome extends DiseaseHandler {
+public class SleepApneaSyndrome extends Disease {
     @Override
     protected boolean matched(Patient patient, Symptom[] symptoms) {
         return patient.getBMI() > 26 && Arrays.stream(symptoms).anyMatch(symptom -> symptom == Symptom.SNORE);

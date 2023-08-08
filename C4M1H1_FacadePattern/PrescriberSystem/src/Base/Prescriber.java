@@ -5,31 +5,35 @@ import DiseaseHandler.Covid19;
 import DiseaseHandler.SleepApneaSyndrome;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.concurrent.ArrayBlockingQueue;
 import java.util.concurrent.BlockingQueue;
 
 public class Prescriber {
     private PatientSystem patientSystem;
-    private List<DiseaseHandler> diseasesHandler;
-    private BlockingQueue<PrescribeTask> queue;
+    private final List<Disease> supportDiseases;
+    private final BlockingQueue<PrescribeTask> queue;
+    private final Map<String, Disease> map;
 
     public Prescriber() {
-        diseasesHandler = new ArrayList<>();
-        queue = new ArrayBlockingQueue(10);
+        supportDiseases = new ArrayList<>();
+        queue = new ArrayBlockingQueue<>(10);
+        map = new HashMap<>();
+        map.put("COVID-19", new Covid19());
+        map.put("Attractive", new Attractive());
+        map.put("SleepApneaSyndrome", new SleepApneaSyndrome());
     }
 
     void importSupportDiseases(List<String> fileContents) {
         for (String fileContent : fileContents) {
-            if (fileContent.equalsIgnoreCase("COVID-19")) {
-                diseasesHandler.add(new Covid19());
-            } else if (fileContent.equalsIgnoreCase("Attractive")) {
-                diseasesHandler.add(new Attractive());
-            } else if (fileContent.equalsIgnoreCase("SleepApneaSyndrome")) {
-                diseasesHandler.add(new SleepApneaSyndrome());
+            if (map.containsKey(fileContent)) {
+                supportDiseases.add(map.get(fileContent));
             }
         }
     }
+
     public List<Prescription> run() {
         while (true) {
             try {
@@ -42,8 +46,9 @@ public class Prescriber {
             }
         }
     }
-    public void prescribe(Patient patient, Symptom[] symptoms)  {
-        PrescribeTask prescribeTask = new PrescribeTask(diseasesHandler, patient, symptoms);
+
+    public void prescribe(Patient patient, Symptom[] symptoms) {
+        PrescribeTask prescribeTask = new PrescribeTask(supportDiseases, patient, symptoms);
         try {
             queue.put(prescribeTask);
         } catch (InterruptedException e) {
@@ -55,6 +60,7 @@ public class Prescriber {
     public void setPatientSystem(PatientSystem patientSystem) {
         this.patientSystem = patientSystem;
     }
+
     private void saveCase(Patient patient, Symptom[] symptoms, List<Prescription> prescriptions) {
         patientSystem.saveCase(patient, symptoms, prescriptions);
     }
