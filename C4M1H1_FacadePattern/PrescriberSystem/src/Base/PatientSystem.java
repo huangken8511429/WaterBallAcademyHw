@@ -9,6 +9,7 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.CompletableFuture;
 import java.util.stream.Collectors;
 
 public class PatientSystem {
@@ -18,6 +19,7 @@ public class PatientSystem {
     public PatientSystem() {
         patientDataBase.setPatientSystem(this);
         prescriber.setPatientSystem(this);
+        prescriber.start();
     }
 
     public void importSupportDisease(String fileName) {
@@ -36,61 +38,15 @@ public class PatientSystem {
         patientDataBase.setPatients(patients);
     }
 
-    public void prescribe(String id, Symptom[] symptoms) {
-        Patient patient = patientDataBase.find(id);
-        prescriber.prescribe(patient, symptoms);
+    public void prescribe(String id, Symptom[] symptoms, String fileName, String fileType) {
+        CompletableFuture.runAsync(() -> prescriber.prescribe(id, symptoms, fileName, fileType));
     }
 
-    public void exportData(String id, String saveFileName, String fileType, List<Prescription> prescriptions) {
-        Patient patient = patientDataBase.find(id);
-        String directoryPath = "data/" + patient.getId();
-        Path path = Paths.get(directoryPath);
-
-        if (!Files.exists(path)) {
-            try {
-                Files.createDirectories(path);
-            } catch (IOException e) {
-                throw new RuntimeException(e);
-            }
-        }
-        String filePath = directoryPath + "/" + saveFileName + "." + fileType;
-        try {
-            switch (fileType) {
-                case "json":
-                    String json = new ObjectMapper().writeValueAsString(prescriptions);
-                    Files.write(Paths.get(filePath), json.getBytes());
-                    break;
-
-                case "csv":
-                    FileWriter csvFileWriter = new FileWriter(filePath);
-
-                    List<String> fieldNames = getFieldNames();
-
-                    List<List<String>> data = prescriptions.stream()
-                            .map(prescription -> getPrescriptionFieldValues(prescription, fieldNames))
-                            .collect(Collectors.toList());
-
-                    csvFileWriter.append(String.join(",", fieldNames)).append("\n");
-
-                    for (List<String> row : data) {
-                        csvFileWriter.append(String.join(",", row)).append("\n");
-                    }
-
-                    csvFileWriter.flush();
-                    csvFileWriter.close();
-                    break;
-
-                default:
-                    System.out.println("Unsupported filetype: " + fileType);
-                    break;
-            }
-
-        } catch (Exception e) {
-            throw new RuntimeException(e);
-        }
+    Patient findPatientById(String id) {
+        return patientDataBase.find(id);
     }
 
-    private static List<String> getFieldNames() {
+    static List<String> getFieldNames() {
         Field[] fields = Prescription.class.getDeclaredFields();
         List<String> fieldNames = new ArrayList<>();
         for (Field field : fields) {
@@ -99,7 +55,7 @@ public class PatientSystem {
         return fieldNames;
     }
 
-    private List<String> getPrescriptionFieldValues(Prescription prescription, List<String> fieldNames) {
+    static List<String> getPrescriptionFieldValues(Prescription prescription, List<String> fieldNames) {
         List<String> fieldValues = new ArrayList<>();
         for (String fieldName : fieldNames) {
             switch (fieldName) {
@@ -115,10 +71,6 @@ public class PatientSystem {
 
     public void saveCase(Patient patient, Symptom[] symptoms, List<Prescription> prescriptions) {
         patientDataBase.saveCase(patient, symptoms, prescriptions);
-    }
-
-    public List<Prescription> run() {
-        return prescriber.run();
     }
 
 

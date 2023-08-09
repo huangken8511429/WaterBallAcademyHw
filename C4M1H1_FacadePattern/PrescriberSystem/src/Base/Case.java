@@ -10,4 +10,8 @@ public class Case {
         this.symptoms = symptoms;
         this.prescription = prescription;
     }
+
+    public Prescription getPrescription() {
+        return prescription;
+    }
 }

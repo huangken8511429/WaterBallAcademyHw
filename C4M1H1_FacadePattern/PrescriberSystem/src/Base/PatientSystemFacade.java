@@ -15,8 +15,6 @@ public class PatientSystemFacade {
     }
 
     public void prescribe(String id, Symptom[] symptoms, String saveFileName, String fileType) {
-        CompletableFuture.runAsync(() -> patientSystem.prescribe(id, symptoms));
-        List<Prescription> run = patientSystem.run();
-        patientSystem.exportData(id, saveFileName, fileType, run);
+        patientSystem.prescribe(id, symptoms, saveFileName, fileType);
     }
 }

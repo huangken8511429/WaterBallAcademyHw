@@ -16,6 +16,7 @@ public class PatientDataBase {
         for (Prescription prescription : prescriptions) {
             patient.addCase(new Case(LocalDateTime.now().toString(), symptoms, prescription));
         }
+        System.out.printf("patient name: %s 病歷更新完成\n", patient.getName());
     }
 
     public Patient find(String id) {

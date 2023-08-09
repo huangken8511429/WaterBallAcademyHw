@@ -11,7 +11,7 @@ import java.util.Map;
 import java.util.concurrent.ArrayBlockingQueue;
 import java.util.concurrent.BlockingQueue;
 
-public class Prescriber {
+public class Prescriber extends Thread {
     private PatientSystem patientSystem;
     private final List<Disease> supportDiseases;
     private final BlockingQueue<PrescribeTask> queue;
@@ -34,21 +34,28 @@ public class Prescriber {
         }
     }
 
-    public List<Prescription> run() {
+    @Override
+    public void run() {
         while (true) {
             try {
                 PrescribeTask task = queue.take();
                 System.out.printf("patient name: %s 正在診斷中\n", task.getPatient().getName());
                 saveCase(task.getPatient(), task.getSymptoms(), task.handle());
-                return task.handle();
+                task.exportData();
             } catch (InterruptedException e) {
                 throw new RuntimeException(e);
+            } finally {
+                if (queue.isEmpty()) {
+                    System.exit(0);
+                }
             }
         }
     }
 
-    public void prescribe(Patient patient, Symptom[] symptoms) {
-        PrescribeTask prescribeTask = new PrescribeTask(supportDiseases, patient, symptoms);
+    public void prescribe(String id, Symptom[] symptoms, String fileName, String fileType) {
+        Patient patient = patientSystem.findPatientById(id);
+        System.out.printf("patient name: %s 正在排隊中\n", patient.getName());
+        PrescribeTask prescribeTask = new PrescribeTask(supportDiseases, patient, symptoms, fileName, fileType);
         try {
             queue.put(prescribeTask);
         } catch (InterruptedException e) {
