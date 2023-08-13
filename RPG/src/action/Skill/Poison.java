@@ -4,18 +4,15 @@ import Base.Role;
 
 import java.util.List;
 
-import static action.Action.TargetType.ENEMY;
-
-public class WaterBall extends Skill {
-
+public class Poison extends Skill {
     @Override
     protected void setName() {
-        this.name = "水球";
+        this.name = "下毒";
     }
 
     @Override
     protected void setMp() {
-        this.mp = 50;
+        this.mp = 80;
     }
 
     @Override
@@ -24,19 +21,14 @@ public class WaterBall extends Skill {
     }
 
     @Override
-    protected void setDamage() {
-        this.damage = 120;
-    }
-
-    @Override
     protected void setTargetType() {
-        this.targetType = ENEMY;
+        targetType = TargetType.ENEMY;
     }
 
     @Override
     public void doPerform(Role role, List<Role> targets) {
         for (Role target : targets) {
-            target.damage(role, damage);
+            target.setState(new State.Poisoned(target));
         }
     }
 }

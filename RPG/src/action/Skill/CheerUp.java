@@ -1,42 +1,35 @@
 package action.Skill;
 
 import Base.Role;
+import action.Action;
 
 import java.util.List;
 
-import static action.Action.TargetType.ENEMY;
-
-public class WaterBall extends Skill {
-
+public class CheerUp extends Skill {
     @Override
     protected void setName() {
-        this.name = "水球";
+        this.name = "鼓舞";
     }
 
     @Override
     protected void setMp() {
-        this.mp = 50;
+        this.mp = 100;
     }
 
     @Override
     protected void setTargetNumber() {
-        this.targetNumber = 1;
-    }
-
-    @Override
-    protected void setDamage() {
-        this.damage = 120;
+        this.targetNumber = 3;
     }
 
     @Override
     protected void setTargetType() {
-        this.targetType = ENEMY;
+        this.targetType = TargetType.AllY;
     }
 
     @Override
     public void doPerform(Role role, List<Role> targets) {
         for (Role target : targets) {
-            target.damage(role, damage);
+            target.enterState(new State.CheerUp(target));
         }
     }
 }

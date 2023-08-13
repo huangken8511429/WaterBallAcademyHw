@@ -1,23 +1,52 @@
-package Base;
+package State;
+
+import action.Action;
+import Base.Role;
+
+import java.util.List;
 
 public abstract class State {
     protected String name;
     protected int effectRound = 3;
     protected Role role;
 
-    public State(String name, int effectRound, Role role) {
-        this.name = name;
-        this.effectRound = effectRound;
+    public State(Role role) {
+        setName();
         this.role = role;
     }
 
+    protected abstract void setName();
+
     public void exitState() {
-        role.setState(new Normal("正常",Integer.MAX_VALUE,))
+        role.setState(new Normal(Integer.MAX_VALUE, role));
     }
 
-    public abstract void roundStart();
+    public void roundStart() {
+        decreaseRound();
+    }
 
-    private boolean isExpired() {
-        return effectRound < 1;
+    protected boolean isExpired() {
+        return effectRound <= 0;
+    }
+
+    protected void decreaseRound() {
+        effectRound--;
+    }
+
+    public void checkExpiredState(List<Action> actions) {
+        if (isExpired()) {
+            this.exitState();
+        }
+    }
+
+    public boolean canAction() {
+        return true;
+    }
+
+    public void handleAction(Action action) {
+    }
+
+    public String getName() {
+        return name;
     }
 }

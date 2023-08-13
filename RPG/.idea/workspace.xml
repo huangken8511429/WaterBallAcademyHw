@@ -1,26 +1,96 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="016de1aa-eb6e-4a8f-9e62-82aa1df090fc" name="Changes" comment="" />
+    <list default="true" id="016de1aa-eb6e-4a8f-9e62-82aa1df090fc" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/action/Skill/CheerUp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/action/Skill/Curse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/action/Skill/Petrochemical.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/action/Skill/Poison.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/action/Skill/SelfExplosion.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/action/Skill/SelfHealing.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/action/Skill/Summon.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C4M1H1_FacadePattern/Facade OOA.png.bak" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C4M1H1_FacadePattern/Facade OOD.asta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C4M1H1_FacadePattern/Facade OOD.png.bak" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/3-B OOA.asta" beforeDir="false" afterPath="$PROJECT_DIR$/src/3-B OOA.asta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/3-B OOA.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/3-B OOA.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/3-B OOA.png.bak" beforeDir="false" afterPath="$PROJECT_DIR$/src/3-B OOA.png.bak" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Base/Battle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Base/Battle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Base/Hero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Base/Hero.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Base/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Base/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Base/RPG.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Base/RPG.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Base/Role.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Base/Role.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Base/Slime.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Base/Slime.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Base/Troop.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Base/Troop.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/BattleStrategy/AIStrategy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BattleStrategy/AIStrategy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/BattleStrategy/BattleStrategy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BattleStrategy/BattleStrategy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/BattleStrategy/HeroStrategy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BattleStrategy/HeroStrategy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Observer/CurseObserver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Observer/CurseObserver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Observer/SkillObserver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Observer/SkillObserver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Observer/SummOnObserver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Observer/SummonObserver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/State/CheerUp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/State/CheerUp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/State/Normal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/State/Normal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/State/Petrochemical.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/State/Petrochemical.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/State/Poisoned.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/State/Poisoned.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/State/State.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/State/State.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Util/util.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Util/util.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/action/Action.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/action/Action.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/action/BasicAttack.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/action/BasicAttack.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/action/Skill/FireBall.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/action/Skill/FireBall.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/action/Skill/Skill.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/action/Skill/Skill.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/action/Skill/WaterBall.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/action/Skill/WaterBall.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="ProjectId" id="2TgU4El2WXWPHPehc3IsW1Iy8FN" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "settings.editor.selected.configurable": "com.poratu.idea.plugins.tomcat.setting.TomcatServersConfigurable",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/Caresys/Desktop/WaterBallAcademyHw/RPG&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.poratu.idea.plugins.tomcat.setting.TomcatServersConfigurable&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="BattleStrategy" />
+      <recent name="State" />
+      <recent name="Base" />
+      <recent name="" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration>$USER_HOME$/.subversion</configuration>
@@ -33,7 +103,59 @@
       <option name="presentableId" value="Default" />
       <updated>1691464024949</updated>
       <workItem from="1691464026214" duration="4000" />
+      <workItem from="1691566027503" duration="5104000" />
+      <workItem from="1691574075262" duration="7268000" />
+      <workItem from="1691629817452" duration="1679000" />
+      <workItem from="1691631758495" duration="12895000" />
+      <workItem from="1691655115945" duration="3919000" />
+      <workItem from="1691670532901" duration="94000" />
+      <workItem from="1691727369525" duration="2793000" />
+      <workItem from="1691740396570" duration="508000" />
+      <workItem from="1691909414781" duration="176000" />
+      <workItem from="1691909605136" duration="7942000" />
     </task>
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/src/Base/Battle.java</url>
+          <line>89</line>
+          <option name="timeStamp" value="19" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/src/Base/Role.java</url>
+          <line>55</line>
+          <option name="timeStamp" value="22" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/src/BattleStrategy/AIStrategy.java</url>
+          <line>24</line>
+          <option name="timeStamp" value="23" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/src/Base/Battle.java</url>
+          <line>98</line>
+          <option name="timeStamp" value="24" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/src/Observer/CurseObserver.java</url>
+          <line>9</line>
+          <properties>
+            <option name="lambda-ordinal" value="-1" />
+          </properties>
+          <option name="timeStamp" value="25" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+    <pin-to-top-manager>
+      <pinned-members>
+        <PinnedItemInfo parentTag="java.lang.String" memberName="hashIsZero" />
+      </pinned-members>
+    </pin-to-top-manager>
   </component>
 </project>

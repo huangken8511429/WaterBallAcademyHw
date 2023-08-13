@@ -4,13 +4,10 @@ import Base.Role;
 
 import java.util.List;
 
-import static action.Action.TargetType.ENEMY;
-
-public class WaterBall extends Skill {
-
+public class SelfHealing extends Skill {
     @Override
     protected void setName() {
-        this.name = "水球";
+        this.name = "自我治療";
     }
 
     @Override
@@ -24,19 +21,13 @@ public class WaterBall extends Skill {
     }
 
     @Override
-    protected void setDamage() {
-        this.damage = 120;
-    }
-
-    @Override
     protected void setTargetType() {
-        this.targetType = ENEMY;
+        targetType = TargetType.SELF;
     }
 
     @Override
     public void doPerform(Role role, List<Role> targets) {
-        for (Role target : targets) {
-            target.damage(role, damage);
-        }
+        role.gainHp(150);
     }
+
 }

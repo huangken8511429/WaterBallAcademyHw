@@ -4,39 +4,32 @@ import Base.Role;
 
 import java.util.List;
 
-import static action.Action.TargetType.ENEMY;
-
-public class WaterBall extends Skill {
-
+public class SelfExplosion extends Skill {
     @Override
     protected void setName() {
-        this.name = "水球";
+        this.name = "自爆";
     }
 
     @Override
     protected void setMp() {
-        this.mp = 50;
+        this.mp = 200;
     }
 
     @Override
     protected void setTargetNumber() {
-        this.targetNumber = 1;
-    }
-
-    @Override
-    protected void setDamage() {
-        this.damage = 120;
+        this.targetNumber = Integer.MAX_VALUE;
     }
 
     @Override
     protected void setTargetType() {
-        this.targetType = ENEMY;
+        this.targetType = TargetType.ALL;
     }
 
     @Override
     public void doPerform(Role role, List<Role> targets) {
         for (Role target : targets) {
-            target.damage(role, damage);
+            target.damage(role, 150);
         }
+        role.stateDamage(Integer.MAX_VALUE);
     }
 }
