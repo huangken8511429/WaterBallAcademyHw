@@ -2,6 +2,7 @@ package action;
 
 import Base.Role;
 
+import java.time.temporal.IsoFields;
 import java.util.List;
 
 public abstract class Action {
@@ -11,6 +12,7 @@ public abstract class Action {
     protected Role role;
     protected int targetNumber;
     protected TargetType targetType;
+
     public Action() {
         setName();
         setMp();
@@ -46,7 +48,11 @@ public abstract class Action {
                 targetName.append(s).append(", ");
             }
         }
-        System.out.printf("%s 對%s 使用了 %s。\n", role.getName(), targetName.toString(), this.name);
+        if (targetName.length() == 0) {
+            System.out.printf("%s 使用了 %s。\n", role.getName(), this.name);
+        } else {
+            System.out.printf("%s 對 %s 使用了 %s。\n", role.getName(), targetName.toString(), this.name);
+        }
     }
 
     public abstract void doPerform(Role role, List<Role> targets);
@@ -88,7 +94,7 @@ public abstract class Action {
     }
 
     public enum TargetType {
-        AllY, ENEMY, SELF,ALL
+        AllY, ENEMY, SELF, ALL
     }
 
     public Role getRole() {

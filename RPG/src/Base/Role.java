@@ -17,7 +17,7 @@ public class Role {
     protected String name;
     protected List<Role> monitors;
     protected List<Action> actions = new ArrayList<>();
-    protected State state = new Normal(Integer.MAX_VALUE, this);
+    protected State state = new Normal(this);
     protected BattleStrategy battleStrategy;
     protected List<SkillObserver> observers = new ArrayList<>();
     protected Troop troop;
@@ -61,7 +61,7 @@ public class Role {
     }
 
     public void damage(Role attacker, int value) {
-        System.out.printf("%s 對 %s 造成 %d 點傷害\n", attacker.getName(), this.getName(), value);
+        System.out.printf("%s 對 %s 造成 %d 點傷害。\n", attacker.getName(), this.getName(), value);
         this.hp -= value;
         if (isDead()) {
             System.out.printf("%s 死亡。\n", this.getName());
@@ -113,8 +113,8 @@ public class Role {
         return this instanceof Hero;
     }
 
-    public void register(SkillObserver skillObserver) {
-        observers.add(skillObserver);
+    public void register(List<SkillObserver> skillObserver) {
+        observers.addAll(skillObserver);
     }
 
     private void unregister(SkillObserver skillObserver) {
@@ -155,5 +155,9 @@ public class Role {
 
     public void setTroop(Troop troop) {
         this.troop = troop;
+    }
+
+    public State getState() {
+        return state;
     }
 }

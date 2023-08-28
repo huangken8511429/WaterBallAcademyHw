@@ -18,7 +18,7 @@ public abstract class State {
     protected abstract void setName();
 
     public void exitState() {
-        role.setState(new Normal(Integer.MAX_VALUE, role));
+        role.setState(new Normal(role));
     }
 
     public void roundStart() {

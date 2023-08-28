@@ -31,5 +31,4 @@ public class Petrochemical extends Skill {
             target.setState(new State.Petrochemical(target));
         }
     }
-
 }

@@ -5,45 +5,45 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="016de1aa-eb6e-4a8f-9e62-82aa1df090fc" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/action/Skill/CheerUp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/action/Skill/Curse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/action/Skill/Petrochemical.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/action/Skill/Poison.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/action/Skill/SelfExplosion.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/action/Skill/SelfHealing.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/action/Skill/Summon.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../C4M1H1_FacadePattern/Facade OOA.png.bak" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../C4M1H1_FacadePattern/Facade OOD.asta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../C4M1H1_FacadePattern/Facade OOD.png.bak" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/3-B OOA.asta" beforeDir="false" afterPath="$PROJECT_DIR$/src/3-B OOA.asta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/3-B OOA.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/3-B OOA.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/3-B OOA.png.bak" beforeDir="false" afterPath="$PROJECT_DIR$/src/3-B OOA.png.bak" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/3-B OOD.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/3-B OOD.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Base/Battle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Base/Battle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Base/Hero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Base/Hero.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Base/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Base/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Base/RPG.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Base/RPG.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Base/Role.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Base/Role.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Base/Slime.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Base/Slime.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Base/Troop.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Base/Troop.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/BattleStrategy/AIStrategy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BattleStrategy/AIStrategy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/BattleStrategy/BattleStrategy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BattleStrategy/BattleStrategy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/BattleStrategy/HeroStrategy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BattleStrategy/HeroStrategy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Observer/CurseObserver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Observer/CurseObserver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Observer/SkillObserver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Observer/SkillObserver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Observer/SummOnObserver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Observer/SummonObserver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/State/CheerUp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/State/CheerUp.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/State/Normal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/State/Normal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/State/Petrochemical.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/State/Petrochemical.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/State/Poisoned.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/State/Poisoned.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/State/State.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/State/State.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Util/util.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Util/util.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TestCase/CheerUpTestCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TestCase/CheerUpTestCase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TestCase/CurseTestCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TestCase/CurseTestCase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TestCase/OnePunchTestCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TestCase/OnePunchTestCase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TestCase/OnlyBasicAttackTestCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TestCase/OnlyBasicAttackTestCase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TestCase/PetrochemicalTestCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TestCase/PetrochemicalTestCase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TestCase/PoisonTestCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TestCase/PoisonTestCase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TestCase/SelfExplosionTestCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TestCase/SelfExplosionTestCase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TestCase/SelfHealingTestCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TestCase/SelfHealingTestCase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TestCase/SummonTestCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TestCase/SummonTestCase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TestCase/WaterBallAndFireBallTestCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TestCase/WaterBallAndFireBallTestCase.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/action/Action.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/action/Action.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/action/BasicAttack.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/action/BasicAttack.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/action/Skill/FireBall.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/action/Skill/FireBall.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/action/Skill/Skill.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/action/Skill/Skill.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/action/Skill/WaterBall.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/action/Skill/WaterBall.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/action/OnePuchHandler/OnePunchHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/action/OnePuchHandler/OnePunchHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/action/OnePuchHandler/TargetHpBiggerThen500Handler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/action/OnePuchHandler/TargetHpBiggerThen500Handler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/action/OnePuchHandler/TargetInCheerUpStateHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/action/OnePuchHandler/TargetInCheerUpStateHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/action/OnePuchHandler/TargetInNormalStateHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/action/OnePuchHandler/TargetInNormalStateHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/action/OnePuchHandler/TargetInPoisonOrPetroChemicalStateHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/action/OnePuchHandler/TargetInPoisonOrPetroChemicalStateHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/action/Skill/OnePunch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/action/Skill/OnePunch.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/action/Skill/Petrochemical.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/action/Skill/Petrochemical.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/action/Skill/SelfHealing.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/action/Skill/SelfHealing.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/action/Skill/Summon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/action/Skill/Summon.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/action/SkillTargetTypeHandler/SkillTargetTypeHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/action/SkillTargetTypeHandler/SkillTargetTypeHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/action/SkillTargetTypeHandler/TargetTypeAllHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/action/SkillTargetTypeHandler/TargetTypeAllHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/action/SkillTargetTypeHandler/TargetTypeAllyHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/action/SkillTargetTypeHandler/TargetTypeAllyHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/action/SkillTargetTypeHandler/TargetTypeEnemyHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/action/SkillTargetTypeHandler/TargetTypeEnemyHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/action/SkillTargetTypeHandler/TargetTypeSelfHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/action/SkillTargetTypeHandler/TargetTypeSelfHandler.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,6 +91,26 @@
       <recent name="" />
     </key>
   </component>
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Base.Main" />
+      <module name="RPG" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Base.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration>$USER_HOME$/.subversion</configuration>
@@ -112,7 +132,11 @@
       <workItem from="1691727369525" duration="2793000" />
       <workItem from="1691740396570" duration="508000" />
       <workItem from="1691909414781" duration="176000" />
-      <workItem from="1691909605136" duration="7942000" />
+      <workItem from="1691909605136" duration="8066000" />
+      <workItem from="1691976005959" duration="17007000" />
+      <workItem from="1692002883365" duration="2169000" />
+      <workItem from="1692066754011" duration="4000" />
+      <workItem from="1692091102081" duration="612000" />
     </task>
     <servers />
   </component>
@@ -122,11 +146,6 @@
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint type="java-line">
-          <url>file://$PROJECT_DIR$/src/Base/Battle.java</url>
-          <line>89</line>
-          <option name="timeStamp" value="19" />
-        </line-breakpoint>
         <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/src/Base/Role.java</url>
           <line>55</line>
@@ -138,17 +157,17 @@
           <option name="timeStamp" value="23" />
         </line-breakpoint>
         <line-breakpoint type="java-line">
-          <url>file://$PROJECT_DIR$/src/Base/Battle.java</url>
-          <line>98</line>
-          <option name="timeStamp" value="24" />
-        </line-breakpoint>
-        <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/src/Observer/CurseObserver.java</url>
           <line>9</line>
           <properties>
             <option name="lambda-ordinal" value="-1" />
           </properties>
           <option name="timeStamp" value="25" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Util/util.java</url>
+          <line>20</line>
+          <option name="timeStamp" value="28" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

@@ -2,19 +2,22 @@ package action.OnePuchHandler;
 
 import Base.Role;
 
-public class TargetHpBiggerThen300Handler extends OnePunchHandler{
-    protected TargetHpBiggerThen300Handler(OnePunchHandler next) {
+import java.util.List;
+
+public class TargetHpBiggerThen500Handler extends OnePunchHandler {
+    public TargetHpBiggerThen500Handler(OnePunchHandler next) {
         super(next);
     }
 
     @Override
-    protected boolean match(Role role) {
-        return role.getHp() > 500;
+    protected boolean match(List<Role> targets) {
+        Role role = targets.get(0);
+        return role.getHp() >= 500;
     }
 
-
     @Override
-    protected void doHandle() {
-
+    protected void doHandle(Role attacker, List<Role> targets) {
+        Role target = targets.get(0);
+        target.damage(attacker, 300);
     }
 }

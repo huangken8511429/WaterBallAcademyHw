@@ -30,4 +30,8 @@ public class SelfHealing extends Skill {
         role.gainHp(150);
     }
 
+    @Override
+    public void printInformation(Role role, List<Role> targets) {
+        System.out.printf("%s 使用了 %s\n", role.getName(), this.getName());
+    }
 }

@@ -41,7 +41,7 @@ public class Summon extends Skill {
         }
         slime.setTroop(troop);
         slime.addMonitor(role);
-        slime.register(new SummonObserver());
+        slime.register(List.of(new SummonObserver()));
         troop.addRole(slime);
     }
 

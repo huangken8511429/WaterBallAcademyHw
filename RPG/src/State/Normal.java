@@ -5,7 +5,7 @@ import Base.Role;
 public class Normal extends State {
     private final int effectRound = Integer.MAX_VALUE;
 
-    public Normal(int effectRound, Role role) {
+    public Normal(Role role) {
         super(role);
     }
 

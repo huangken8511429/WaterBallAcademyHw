@@ -1,8 +1,9 @@
 package Base;
 
+import action.SkillTargetTypeHandler.SkillTargetTypeHandler;
+
 import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collectors;
 
 public class Troop {
     private Battle battle;
@@ -11,14 +12,6 @@ public class Troop {
     public Troop(List<Role> roles) {
         this.roles.addAll(roles);
         this.roles.forEach(role -> role.setTroop(this));
-    }
-
-    public Battle battle(Troop enemy) {
-        if (battle != null) {
-            throw new IllegalArgumentException("你只能同時跟一位軍隊戰鬥!");
-        }
-        battle = new Battle(this, enemy);
-        return battle;
     }
 
     public boolean annihilate() {

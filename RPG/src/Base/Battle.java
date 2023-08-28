@@ -1,6 +1,7 @@
 package Base;
 
 import action.Action;
+import action.SkillTargetTypeHandler.SkillTargetTypeHandler;
 
 import java.util.List;
 import java.util.stream.Collectors;
@@ -8,15 +9,16 @@ import java.util.stream.Collectors;
 import static Util.util.printf;
 
 public class Battle {
-    private Troop allyTroop;
-    private Troop enemyTroop;
-    private int round = 0;
+    private final Troop allyTroop;
+    private final Troop enemyTroop;
+    private final SkillTargetTypeHandler skillTargetTypeHandler;
 
-    public Battle(Troop allyTroop, Troop enemyTroop) {
+    public Battle(Troop allyTroop, Troop enemyTroop, SkillTargetTypeHandler skillTargetTypeHandler) {
         this.allyTroop = allyTroop;
         this.enemyTroop = enemyTroop;
         allyTroop.setBattle(this);
         enemyTroop.setBattle(this);
+        this.skillTargetTypeHandler = skillTargetTypeHandler;
     }
 
     public void startBattle() {
@@ -54,14 +56,13 @@ public class Battle {
             printf("輪到 %s (HP: %d, MP: %d, STR: %d, State: %s)。\n",
                     role.getName(), role.getHp(), role.getMp(), role.getStr(), role.state.getName());
             role.state.roundStart();
-            if (!role.state.canAction()) {
-                return;
+            if (role.state.canAction() && role.isAlive()) {
+                Action action = askRoleChooseAction(role);
+                List<Role> targets = askAllysChooseTarget(role, action);
+                role.setMp(role.getMp() - action.getMp());
+                role.state.handleAction(action);
+                action.perform(role, targets);
             }
-            Action action = askRoleChooseAction(role);
-            List<Role> targets = askAllysChooseTarget(role, action);
-            role.setMp(role.getMp() - action.getMp());
-            role.state.handleAction(action);
-            action.perform(role, targets);
             role.state.checkExpiredState(role.getActions());
         }
     }
@@ -70,16 +71,20 @@ public class Battle {
         return allyTroop.getRoles().stream().filter(Role::isAlive).filter(role -> !(role instanceof Hero)).collect(Collectors.toList());
     }
 
-    private List<Role> getAliveAllys() {
+    public List<Role> getAliveAllys() {
         return allyTroop.getRoles().stream().filter(Role::isAlive).collect(Collectors.toList());
     }
 
-    private List<Role> getAliveAllys(Role role) {
-        return allyTroop.getRoles().stream().filter(ally -> !ally.equals(role)).collect(Collectors.toList());
+    public List<Role> getAliveAllys(Role role) {
+        return allyTroop.getRoles().stream().filter(Role::isAlive).filter(ally -> !ally.equals(role)).collect(Collectors.toList());
     }
 
-    private List<Role> getAliveEnemies() {
+    public List<Role> getAliveEnemies() {
         return enemyTroop.getRoles().stream().filter(Role::isAlive).collect(Collectors.toList());
+    }
+
+    public List<Role> getAliveEnemies(Role role) {
+        return enemyTroop.getRoles().stream().filter(Role::isAlive).filter(enemy -> !enemy.equals(role)).collect(Collectors.toList());
     }
 
     private Action askRoleChooseAction(Role role) {
@@ -87,26 +92,7 @@ public class Battle {
     }
 
     private List<Role> askAllysChooseTarget(Role role, Action action) {
-        List<Role> targets = null;
-        Action.TargetType targetType = action.getTargetType();
-        if (targetType == Action.TargetType.AllY) {
-            if (role.getTroop().equals(allyTroop)) {
-                targets = role.chooseTargets(action, getAliveAllys(role));
-            } else {
-                targets = role.chooseTargets(action, getAliveEnemies());
-            }
-        } else if (targetType == Action.TargetType.ENEMY) {
-            if (role.getTroop().equals(allyTroop)) {
-                targets = role.chooseTargets(action, getAliveEnemies());
-            } else {
-                targets = role.chooseTargets(action, getAliveAllys());
-            }
-        } else if (targetType == Action.TargetType.SELF) {
-            targets = role.chooseTargets(action, List.of(role));
-        } else if (targetType == Action.TargetType.ALL) {
-            targets = getAllAliveRoles(role);
-        }
-        return targets;
+        return skillTargetTypeHandler.handle(action, role, this);
     }
 
 
@@ -143,7 +129,7 @@ public class Battle {
         return allyTroop;
     }
 
-    private List<Role> getAllAliveRoles(Role role) {
+    public List<Role> getAllAliveRoles(Role role) {
         List<Role> aliveAllys = getAliveAllys();
         List<Role> aliveEnemies = getAliveEnemies();
         aliveAllys.addAll(aliveEnemies);
