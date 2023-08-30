@@ -5,24 +5,8 @@ import Base.Role;
 import java.util.List;
 
 public class Petrochemical extends Skill {
-    @Override
-    protected void setName() {
-        this.name = "石化";
-    }
-
-    @Override
-    protected void setMp() {
-        this.mp = 100;
-    }
-
-    @Override
-    protected void setTargetNumber() {
-        this.targetNumber = 1;
-    }
-
-    @Override
-    protected void setTargetType() {
-        targetType = TargetType.ENEMY;
+    public Petrochemical() {
+        super("石化", 100, 1, 0, TargetType.ENEMY);
     }
 
     @Override

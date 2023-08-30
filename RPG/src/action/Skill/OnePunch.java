@@ -9,27 +9,8 @@ public class OnePunch extends Skill {
     private final OnePunchHandler onePunchHandler;
 
     public OnePunch(OnePunchHandler onePunchHandler) {
+        super("一拳攻擊", 180, 1, 0, TargetType.ENEMY);
         this.onePunchHandler = onePunchHandler;
-    }
-
-    @Override
-    protected void setName() {
-        this.name = "一拳攻擊";
-    }
-
-    @Override
-    protected void setMp() {
-        this.mp = 180;
-    }
-
-    @Override
-    protected void setTargetNumber() {
-        this.targetNumber = 1;
-    }
-
-    @Override
-    protected void setTargetType() {
-        this.targetType = TargetType.ENEMY;
     }
 
     @Override

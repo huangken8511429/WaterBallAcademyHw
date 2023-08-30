@@ -6,24 +6,9 @@ import action.Action;
 import java.util.List;
 
 public class CheerUp extends Skill {
-    @Override
-    protected void setName() {
-        this.name = "鼓舞";
-    }
 
-    @Override
-    protected void setMp() {
-        this.mp = 100;
-    }
-
-    @Override
-    protected void setTargetNumber() {
-        this.targetNumber = 3;
-    }
-
-    @Override
-    protected void setTargetType() {
-        this.targetType = TargetType.AllY;
+    public CheerUp() {
+        super("鼓舞", 100, 3, 0, TargetType.AllY);
     }
 
     @Override

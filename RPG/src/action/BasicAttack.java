@@ -6,29 +6,9 @@ import java.util.List;
 
 public class BasicAttack extends Action {
 
-    @Override
-    protected void setName() {
-        this.name = "普通攻擊";
-    }
-
-    @Override
-    protected void setMp() {
-        this.mp = 0;
-    }
-
-    @Override
-    protected void setTargetNumber() {
-        this.targetNumber = 1;
-    }
-
-    @Override
-    public void setDamage(int str) {
+    public BasicAttack(int str) {
+        super("普通攻擊", 0, 0, 1, TargetType.ENEMY);
         this.damage = str;
-    }
-
-    @Override
-    protected void setTargetType() {
-        this.targetType = TargetType.ENEMY;
     }
 
     @Override

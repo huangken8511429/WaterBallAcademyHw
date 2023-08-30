@@ -10,24 +10,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Summon extends Skill {
-    @Override
-    protected void setName() {
-        this.name = "召喚";
-    }
-
-    @Override
-    protected void setMp() {
-        this.mp = 150;
-    }
-
-    @Override
-    protected void setTargetNumber() {
-        this.targetNumber = 0;
-    }
-
-    @Override
-    protected void setTargetType() {
-        targetType = TargetType.SELF;
+    public Summon() {
+        super("召喚", 150, 0, 0, TargetType.SELF);
     }
 
     @Override
@@ -47,6 +31,6 @@ public class Summon extends Skill {
 
     @Override
     public void printInformation(Role role, List<Role> targets) {
-        System.out.printf("%s 使用了 %s。\n", role.getName(), this.name);
+        System.out.printf("%s 使用了 %s。\n", role.getName(), getName());
     }
 }

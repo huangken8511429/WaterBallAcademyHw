@@ -37,8 +37,7 @@ public class Role {
     }
 
     private void addBasicAttack(int str) {
-        BasicAttack basicAttack = new BasicAttack();
-        basicAttack.setDamage(str);
+        BasicAttack basicAttack = new BasicAttack(str);
         this.actions.add(basicAttack);
     }
 

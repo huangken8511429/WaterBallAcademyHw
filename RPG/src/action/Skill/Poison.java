@@ -5,24 +5,8 @@ import Base.Role;
 import java.util.List;
 
 public class Poison extends Skill {
-    @Override
-    protected void setName() {
-        this.name = "下毒";
-    }
-
-    @Override
-    protected void setMp() {
-        this.mp = 80;
-    }
-
-    @Override
-    protected void setTargetNumber() {
-        this.targetNumber = 1;
-    }
-
-    @Override
-    protected void setTargetType() {
-        targetType = TargetType.ENEMY;
+    public Poison() {
+        super("下毒", 80, 1, 0, TargetType.ENEMY);
     }
 
     @Override

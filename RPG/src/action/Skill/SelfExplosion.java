@@ -5,24 +5,8 @@ import Base.Role;
 import java.util.List;
 
 public class SelfExplosion extends Skill {
-    @Override
-    protected void setName() {
-        this.name = "自爆";
-    }
-
-    @Override
-    protected void setMp() {
-        this.mp = 200;
-    }
-
-    @Override
-    protected void setTargetNumber() {
-        this.targetNumber = Integer.MAX_VALUE;
-    }
-
-    @Override
-    protected void setTargetType() {
-        this.targetType = TargetType.ALL;
+    public SelfExplosion() {
+        super("自爆", 200, Integer.MAX_VALUE, 0, TargetType.ALL);
     }
 
     @Override

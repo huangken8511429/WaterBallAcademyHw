@@ -5,24 +5,8 @@ import Base.Role;
 import java.util.List;
 
 public class Curse extends Skill {
-    @Override
-    protected void setName() {
-        this.name = "詛咒";
-    }
-
-    @Override
-    protected void setMp() {
-        this.mp = 100;
-    }
-
-    @Override
-    protected void setTargetNumber() {
-        this.targetNumber = 1;
-    }
-
-    @Override
-    protected void setTargetType() {
-        this.targetType = TargetType.ENEMY;
+    public Curse() {
+        super("詛咒", 100, 1, 0, TargetType.ENEMY);
     }
 
     @Override

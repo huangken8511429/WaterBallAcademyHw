@@ -2,36 +2,23 @@ package action;
 
 import Base.Role;
 
-import java.time.temporal.IsoFields;
 import java.util.List;
 
 public abstract class Action {
-    protected String name;
-    protected int mp;
+    protected final  String name;
+    protected final int mp;
     protected int damage;
     protected Role role;
-    protected int targetNumber;
-    protected TargetType targetType;
+    protected final int targetNumber;
+    protected final TargetType targetType;
 
-    public Action() {
-        setName();
-        setMp();
-        setTargetNumber();
-        setTargetType();
+    protected Action(String name, int mp, int damage, int targetNumber, TargetType targetType) {
+        this.name = name;
+        this.mp = mp;
+        this.damage = damage;
+        this.targetNumber = targetNumber;
+        this.targetType = targetType;
     }
-
-    protected abstract void setName();
-
-    protected abstract void setMp();
-
-    protected abstract void setTargetNumber();
-
-    protected void setDamage(int str) {
-
-    }
-
-    protected abstract void setTargetType();
-
 
     public void perform(Role role, List<Role> targets) {
         printInformation(role, targets);

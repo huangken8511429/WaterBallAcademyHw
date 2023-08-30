@@ -5,24 +5,8 @@ import Base.Role;
 import java.util.List;
 
 public class SelfHealing extends Skill {
-    @Override
-    protected void setName() {
-        this.name = "自我治療";
-    }
-
-    @Override
-    protected void setMp() {
-        this.mp = 50;
-    }
-
-    @Override
-    protected void setTargetNumber() {
-        this.targetNumber = 1;
-    }
-
-    @Override
-    protected void setTargetType() {
-        targetType = TargetType.SELF;
+    public SelfHealing() {
+        super("自我治療", 50, 1, 0, TargetType.SELF);
     }
 
     @Override

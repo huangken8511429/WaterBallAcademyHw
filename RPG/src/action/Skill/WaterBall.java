@@ -8,35 +8,14 @@ import static action.Action.TargetType.ENEMY;
 
 public class WaterBall extends Skill {
 
-    @Override
-    protected void setName() {
-        this.name = "水球";
-    }
-
-    @Override
-    protected void setMp() {
-        this.mp = 50;
-    }
-
-    @Override
-    protected void setTargetNumber() {
-        this.targetNumber = 1;
-    }
-
-    @Override
-    protected void setDamage() {
-        this.damage = 120;
-    }
-
-    @Override
-    protected void setTargetType() {
-        this.targetType = ENEMY;
+    public WaterBall() {
+        super("水球", 50, 1, 120, ENEMY);
     }
 
     @Override
     public void doPerform(Role role, List<Role> targets) {
         for (Role target : targets) {
-            target.damage(role, damage);
+            target.damage(role, getDamage());
         }
     }
 }
